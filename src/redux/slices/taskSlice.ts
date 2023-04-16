@@ -18,7 +18,7 @@ export const taskSlice = createSlice({
     removeOne: (state, action: PayloadAction<{ id: string }>) => {
       const targetId = action.payload.id;
 
-      state.filter((tasks) => tasks.id !== targetId);
+      return state.filter((tasks) => tasks.id !== targetId);
     },
     markCompleted: (state, action: PayloadAction<{ id: string }>) => {
       const targetId = action.payload.id;
